@@ -1,13 +1,51 @@
 Date::MMDDYY - Converts a epoch time format string to MM-DD-YY
 
-Install :
+Install instructions:
 
 # perl Makefile.PL
 # make
 # make test
 # make install
-# man Date::MMDDYY 
-  or 
-# perldoc Date::MMDDYY
+
+Example:
+
+ use Date::MMDDYY;
+ 
+ $time_string = time();
+ $date = datecon($time_string); 
+
+# or 
+
+ $date = datecon("$time_string", "MM,YY", "/");
+
+# or 
+
+ $date = datecon("$time_string", "", "_");
+
+# or 
+
+ $date = datecon("$time_string", "MM,DD", "");
+
+Usage:
+
+datecon("$time_string", "$format", "$delemiter");
+
+$time_string contains the output of the time(); function,
+or an epoch time stamp. 
+
+$format should be a comma seperated list of the variables you want 
+(no spaces). Accepted are MM for month, DD for day, and YY for year.
+They should be in the order you want them output as. If you want the
+default (MM,DD,YY) just provide blank quotes, otherwise you will 
+receive an error.
+ 
+$delemiter should contain, well, what you want to use as the 
+delemiter. If nothing is provided, "-" will be used as default.
+
+
+If you just want the standard MM-DD-YY output you just just provide
+the $time_string and nothing else.
+
+Contact:
 
 gbailey@cpan.org
