@@ -1,0 +1,11 @@
+Date::MMDDYY - Converts a epoch time format string to MM-DD-YY
+
+Install :
+
+# perl Makefile.PL
+# make
+# make test
+# make install
+# man Date::MMDDYY 
+  or 
+# perldoc Date::MMDDYY
