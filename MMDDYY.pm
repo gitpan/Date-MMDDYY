@@ -1,13 +1,13 @@
 package Date::MMDDYY;
 
-# Date::MMDDYY module, version 1.00
+# Date::MMDDYY module, version 1.01
 
 require 5.000;
 require Exporter;
 
 our @ISA = (Exporter);
 our @EXPORT = qw(datecon);
-our $VERSION = 1.00;
+our $VERSION = 1.01;
 
 sub datecon {
 
@@ -110,7 +110,7 @@ or a epoch time stamp. It will then return the date in the MM-DD-YY format.
 
 =head1 AUTHOR
 
-Glenn E. Bailey III <replicant@napalm.net>
+Glenn E. Bailey III <gbailey@cpan.org>
 
 =head1 COPYRIGHT
 
